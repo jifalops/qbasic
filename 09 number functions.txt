@@ -1,0 +1,78 @@
+' Jacob Phillips
+
+CLS
+PRINT "Program: Math Functions"
+PRINT "Description: Show examples of popular math functions build into BASIC"
+PRINT
+
+' ---
+' Square root: SQR(num)
+' ---
+PRINT "The sqaure root of 37 is "; SQR(37)
+PRINT
+
+' ---
+' Absolute value: ABS(num)
+' ---
+PRINT "Absolute value of 12 = "; ABS(12)
+PRINT "Absolute value of -12 = "; ABS(-12); "!"
+PRINT
+
+' -----------------------------------------------
+' Sine, cosine, tangent: SIN, COS, TAN
+' As well as arctangent, to find angles: ATN
+' -----------------------------------------------
+INPUT "Right-triangle side a"; a
+INPUT "Right-triangle side b"; b
+
+c = SQR(a ^ 2 + b ^ 2)
+PRINT "c (Hypotenuse) = "; c
+
+' Works with radians by default.
+' This changes radians to degrees
+CONST pi = 3.1415
+CONST degrees = 180 / pi
+
+' Angles in radians
+ac = ATN(b / a)
+bc = ATN(a / b)
+
+PRINT
+PRINT "Angle ac = "; ac; " radians, "; ac * degrees; " degrees."
+PRINT "Angle bc = "; bc; " radians, "; bc * degrees; " degrees."
+PRINT
+' Print trig functions in columns
+PRINT "Angle", "SIN", "COS", "TAN"
+PRINT "ac", SIN(b / c), COS(a / c), TAN(b / a)
+PRINT "bc", SIN(a / c), COS(b / c), TAN(a / b)
+
+
+' Pause to go on
+PRINT
+INPUT "Press Enter to continue"; var
+CLS
+
+' ---
+' Rounding
+' ---
+PRINT "12.49 rounded = "; CINT(12.49)
+PRINT "12.51 rounded = "; CINT(12.51)
+PRINT "-12.49 rounded = "; CINT(-12.49)
+PRINT "-12.51 rounded = "; CINT(-12.51)
+PRINT
+
+' ---
+' Dropping fractional part of number (truncating)
+' ---
+PRINT "3.21 truncated (FIX) = "; FIX(3.21)
+PRINT "3.81 truncated (FIX) = "; FIX(3.81)
+PRINT "-3.21 truncated (FIX) = "; FIX(-3.21)
+PRINT "-3.81 truncated (FIX) = "; FIX(-3.81)
+PRINT
+
+' Slightly different than FIX
+PRINT "3.21 truncated (INT) = "; INT(3.21)
+PRINT "3.81 truncated (INT) = "; INT(3.81)
+PRINT "-3.21 truncated (INT) = "; INT(-3.21)
+PRINT "-3.81 truncated (INT) = "; INT(-3.81)
+

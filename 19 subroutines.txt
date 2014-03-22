@@ -1,0 +1,19 @@
+' Subroutines are just like functions except for a few things:
+'   - they don't return a value
+'   - when using a subroutine, you use the CALL keyword
+'   - They use SUB and END SUB instead ofthe corresponding function keywords
+
+CLS
+x = 1
+
+PRINT "x = "; x
+CALL AddOne(x)
+PRINT "x = "; x
+
+' ===========
+' Subroutines
+' ===========
+
+SUB AddOne (x)
+x = x + 1
+END SUB

@@ -1,0 +1,60 @@
+' ---------------------------
+' Constants cannot be changed
+' ---------------------------
+CONST e = 2.71828182845904523536028747135266
+CONST pi = 3.1415
+
+answer = e * pi * pi
+
+PRINT "Result of calculation using CONSTants"
+PRINT answer
+PRINT
+
+' ----------------------------------------------------
+' You can't assign a number to a string variable
+' or vice versa. For convenience, there are two
+' built-in functions that will do that for you.
+' The following shows how conversions are interpretted
+' ----------------------------------------------------
+
+' Define some strings
+s1$ = "1"
+s2$ = "x2"
+s3$ = "3x"
+s4$ = "x"
+
+' Define some numbers
+n1 = 10
+n2 = 20
+n3 = 30
+n4 = 40
+
+' Add the numbers and the numeric value of the string.
+num1 = VAL(s1$) + n1 + 100
+num2 = VAL(s2$) + n2 + 200
+num3 = VAL(s3$) + n3 + 300
+num4 = VAL(s4$) + n4 + 400
+
+' "Add", or more precisely, "concatenate" (put together)
+' the strings and the string value of the numbers.
+concat1$ = s1$ + STR$(n1) + "z"
+concat2$ = s2$ + STR$(n2) + "z"
+concat3$ = s3$ + STR$(n3) + "z"
+concat4$ = s4$ + STR$(n4) + "z"
+
+
+PRINT "String -> number (notice differences)"
+PRINT num1
+PRINT num2
+PRINT num3
+PRINT num4
+PRINT
+PRINT "Number -> string"
+PRINT concat1$
+PRINT concat2$
+PRINT concat3$
+PRINT concat4$
+
+' Did you see which strings were successfully converted to numbers?
+' (A number can always be converted to a string.)
+

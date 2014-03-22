@@ -1,0 +1,77 @@
+' More string functions
+
+CLS
+
+' Make a string constant (msg is short for message)
+CONST msg$ = "Hello World"
+PRINT "123456789012345"
+PRINT msg$
+PRINT
+
+
+' ---
+' Getting the beginning of a string: LEFT$
+'   LEFT$(string, num_characters)
+' ---
+PRINT "Left:"
+PRINT LEFT$(msg$, 1)
+PRINT LEFT$(msg$, 2)
+PRINT LEFT$(msg$, 7)
+PRINT
+
+
+' ---
+' Getting the end of a string: RIGHT$
+'   RIGHT$(string, num_characters)
+' ---
+PRINT "Right:"
+PRINT RIGHT$(msg$, 1)
+PRINT RIGHT$(msg$, 2)
+PRINT RIGHT$(msg$, 7)
+PRINT
+
+
+' ---
+' Getting the middle of a string: MID$
+'   MID$(string, start_position, [num_characters])
+'
+' num_charaters is in brackets because it is optional.
+' When not given, it uses the rest of the string.
+' ---
+PRINT "Mid:"
+PRINT MID$(msg$, 1)
+PRINT MID$(msg$, 2)
+PRINT MID$(msg$, 7)
+PRINT MID$(msg$, 1, 2)
+PRINT MID$(msg$, 2, 3)
+PRINT MID$(msg$, 7, 4)
+PRINT
+
+
+' Wait to go on
+INPUT "Continue"; blah
+CLS
+
+
+' ---
+' Searching in a string: INSTR
+'   INSTR([start,] haystack, needle)
+'
+' As shown above, start is optional and
+' starts at the beginning of the string by default
+' ---
+
+PRINT "123456789012345"
+PRINT msg$
+PRINT
+
+PRINT "In String (0 means not found):"
+PRINT "Finds FIRST match."
+PRINT "H = "; INSTR(msg$, "H")
+PRINT "h = "; INSTR(msg$, "h") ' Case sensitive!
+PRINT "l = "; INSTR(msg$, "l")
+PRINT "o = "; INSTR(msg$, "o")
+PRINT "Change starting points:"
+PRINT "l = "; INSTR(4, msg$, "l")
+PRINT "o = "; INSTR(7, msg$, "o")
+PRINT "W = "; INSTR(8, msg$, "W")

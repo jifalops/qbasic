@@ -1,0 +1,18 @@
+CLS
+PRINT "Program: CLS (clear screen) Example"
+PRINT
+
+INPUT "enter a string"; text$
+
+CLS
+INPUT "enter a number"; num
+PRINT
+INPUT "ping"; pong$
+
+CLS
+PRINT "string:"; text$
+PRINT
+PRINT "number:"; num
+PRINT
+PRINT "ping!?:"; pong$
+

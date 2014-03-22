@@ -1,0 +1,22 @@
+' Functions are preferred over subroutines, but sometimes it doesn't
+' make sense to return a value - thats when you should use subroutine.
+
+CLS
+x = 1
+
+CALL PrintValue("x", x)
+CALL AddOne(x)
+CALL PrintValue("x", x)
+
+
+' ===========
+' Subroutines
+' ===========
+
+SUB AddOne (num)
+num = num + 1
+END SUB
+
+SUB PrintValue (name$, value)
+PRINT name$; " = "; value
+END SUB

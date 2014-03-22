@@ -1,0 +1,53 @@
+' IF statement example
+'
+' Get two numbers from the user as well as an operation
+' to perform on those numbers (add, subtract, multiply,
+' divide).
+
+CLS
+
+' Get two numbers from the user
+PRINT "Enter two numbers:"
+INPUT num1
+INPUT num2
+PRINT
+
+' Get one more input, to decide what to do with the numbers
+PRINT "What do you want to do with those numbers?"
+PRINT "1: add"
+PRINT "2: subtract"
+PRINT "3: multiply"
+PRINT "4: divide"
+
+' The operation they choose
+INPUT choice
+PRINT
+
+
+IF (choice = 1) THEN
+    operation$ = " plus "
+    result = num1 + num2
+ELSEIF (choice = 2) THEN
+    operation$ = " minus "
+    result = num1 - num2
+ELSEIF (choice = 3) THEN
+    operation$ = " times "
+    result = num1 * num2
+ELSEIF (choice = 4) THEN
+    ' Dividing by zero makes the program crash
+    IF (num2 <> 0) THEN
+        operation$ = " divided by "
+        result = num1 / num2
+    ELSE
+        PRINT "Can't divide by zero! Try again."
+    END IF
+ELSE
+    PRINT "Invalid choice. Try again."
+END IF
+
+
+' Print the results, if there are any
+' This checks that the operation isn't an empty string
+IF (operation$ <> "") THEN
+    PRINT num1; operation$; num2; " is "; result
+END IF

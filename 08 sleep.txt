@@ -1,0 +1,24 @@
+CLS
+PRINT "Program: Sleep"
+PRINT "Description: Uses SLEEP to control execution time"
+PRINT ' a blank line!
+
+' SLEEP causes the program to wait for
+' a given number of seconds before moving on.
+' It isn't some thing that should be used often,
+' but it's worth mentioning.
+
+PRINT "Waiting 3 seconds..."
+SLEEP 3
+PRINT "Done."
+PRINT
+
+' Getting a bit trickier
+PRINT
+INPUT "How long should i wait (at least 2)"; seconds
+PRINT "If you say so..."
+SLEEP seconds / 2
+PRINT "..."
+SLEEP seconds / 2
+PRINT "Back."
+

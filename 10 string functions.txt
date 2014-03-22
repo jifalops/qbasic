@@ -1,0 +1,42 @@
+' Program to demonstrate some built-in string functions
+
+CLS
+
+' ---
+' Change to upper-case: UCASE
+' ---
+INPUT "Enter something to change to upper-case"; something$
+PRINT UCASE$(something$)
+PRINT
+
+
+' ---
+' Change to lower-case: LCASE
+' ---
+INPUT "Enter something to change to lower-case"; something$
+PRINT LCASE$(something$)
+PRINT
+
+
+' ---
+' Length of a string: LEN
+' ---
+INPUT "Enter a string to find the length of"; text$
+length = LEN(text$)
+PRINT "You entered "; length; "characters."
+PRINT
+
+
+' ---
+' Character to ASCII value: ASC
+' ---
+INPUT "Enter a single character"; char$
+PRINT "The ASCII value is "; ASC(char$)
+PRINT
+
+
+' ---
+' ASCII value to Character: CHR$
+' ---
+INPUT "Enter a number between 32 and 127"; num
+PRINT "That ASCII character is: "; CHR$(num)

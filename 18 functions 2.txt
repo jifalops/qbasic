@@ -1,0 +1,39 @@
+' A caveat of using function is that they all have to be placed at the
+' end of the code. You can not put "normal" statements such as PRINT past
+' the point where a function has been defined. It's not that big a deal,
+' just remember functions go at the end/bottom of the code.
+
+PRINT getDescription
+
+INPUT "Enter a number"; num
+
+PRINT num; "cubed = "; cube(num)
+
+INPUT "Enter a small number"; smallnum
+
+PRINT num; "^"; smallnum; "="; power(num, smallnum)
+
+PRINT join$("placing a number in a string", cube(smallnum))
+
+
+
+' Return a string describing this file
+FUNCTION getDescription$ ()
+getDescription$ = "Functions 2: some short example functions"
+END FUNCTION
+
+' Cube a number
+FUNCTION cube (num)
+cube = num ^ 3
+END FUNCTION
+
+' Raise a number to a given power
+FUNCTION power (num, pow)
+power = num ^ pow
+END FUNCTION
+
+' Combines a string and a number into a single string
+FUNCTION join$ (text$, number)
+join$ = text$ + STR$(number)
+END FUNCTION
+
